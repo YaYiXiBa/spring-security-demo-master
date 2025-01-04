@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: securityDemo
+  security:
+    user:
+      name: user
+      password: '123'
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://47.97.210.239:3306/security-demo
+    username: root
+    password: '123456'
+
+server:
+  servlet:
+    context-path: /demo 
