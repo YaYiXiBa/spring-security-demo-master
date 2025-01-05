@@ -48,15 +48,7 @@ public class WebSecurityConfig {
                     exception.authenticationEntryPoint(new MyAuthenticationEntryPoint());
                 })
                 .httpBasic(withDefaults());
-//                .exceptionHandling(exceptions -> exceptions
-//                        .authenticationEntryPoint((request, response, authException) -> {
-//                            if ("XMLHttpRequest".equals(request.getHeader("X-Requested-With"))) {
-//                                response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "未登录");
-//                            } else {
-//                                response.sendRedirect("/login-page");
-//                            }
-//                        })
-//                );
+
         http.cors(withDefaults());
         http.csrf(csrf -> csrf.disable());
         return http.build();
